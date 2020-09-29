@@ -3,6 +3,7 @@ package com.example.passingvalue;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,15 +31,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        nama = (EditText)findViewById(R.id.edtName);
-        nim = (EditText)findViewById(R.id.edtNim);
         tanggal = (EditText)findViewById(R.id.edtTanggalLahir);
-        jurusan = (Spinner)findViewById(R.id.spinnerJurusan);
         submit = (Button)findViewById(R.id.saveButton);
-        sex = (RadioGroup)findViewById((R.id.sex))
 
-        jurusan.setOnClickListener(new View.OnClickListener() {
+        tanggal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Calendar calendar = Calendar.getInstance();
@@ -59,17 +55,36 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = nama.getText().toString();
-                String no = nim.getText().toString();
-                String date = tanggal.getText().toString();
-                String sex = radioButton.getText().toString();
-
+                openSecondActivity();
             }
         });
     }
 
-    public void checkButton(View v){
+    public void checkButton(){
         int radioId = sex.getCheckedRadioButtonId();
         radioButton = findViewById(radioId);
+    }
+
+    public void openSecondActivity(){
+        nama = (EditText)findViewById(R.id.edtName);
+        nim = (EditText)findViewById(R.id.edtNim);
+        tanggal = (EditText)findViewById(R.id.edtTanggalLahir);
+        jurusan = (Spinner)findViewById(R.id.spinnerJurusan);
+        sex = (RadioGroup)findViewById((R.id.sex));
+
+        String name = nama.getText().toString();
+        String no = nim.getText().toString();
+        String date = tanggal.getText().toString();
+        checkButton();
+        String sex = radioButton.getText().toString();
+        String major = jurusan.getSelectedItem().toString();
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("name", name);
+        intent.putExtra("NIM", no);
+        intent.putExtra("tanggal", date);
+        intent.putExtra("gender", sex);
+        intent.putExtra("jurusan", major);
+
+        startActivity(intent);
     }
 }

@@ -61,16 +61,14 @@
             android:id="@+id/laki"
             android:layout_width="186dp"
             android:layout_height="wrap_content"
-            android:text="Laki-laki"
-            android:onClick="checkButton"/>
+            android:text="Laki-laki" />
 
         <RadioButton
             android:id="@+id/perempuan"
             android:layout_width="194dp"
             android:layout_height="wrap_content"
             android:text="Perempuan"
-            app:layout_constraintStart_toEndOf="@+id/laki"
-            android:onClick="checkButton"/>
+            app:layout_constraintStart_toEndOf="@+id/laki" />
 
     </RadioGroup>
 
@@ -80,7 +78,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:entries="@array/jurusan_arrays"
@@ -89,15 +87,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/sex" />
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="352dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="68dp"
         android:text="Simpan data"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerJurusan" />
 

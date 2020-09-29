@@ -20,6 +20,7 @@ public class SecondActivity extends AppCompatActivity {
         String tanggal = intent.getStringExtra("tanggal");
         String gender = intent.getStringExtra("gender");
         String jurusan = intent.getStringExtra("jurusan");
+        //read extra by tag name
 
         TextView nama = (TextView) findViewById(R.id.name);
         TextView no = (TextView) findViewById(R.id.nim);

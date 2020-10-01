@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Form Pendaftaran</string>
+    <string-array name="fakultas">
+        <item>Teknik</item>
+        <item>Kedokteran</item>
+        <item>MIPA</item>
+        <item>Seni</item>
+        <item>Hukum</item>
+        <item>PASCASARJANA</item>
+    </string-array>
+
+    <string-array name="prodi">
+        <item>Teknik Mesin</item>
+        <item>Teknik Elektro</item>
+        <item>Teknik Sipil</item>
+        <item>Teknik Industri</item>
+        <item>Teknik Informatika</item>
+        <item>Dokter Umum</item>
+        <item>Dokter Gigi</item>
+        <item>Dokter Penyakit Dalam</item>
+        <item>Biologi</item>
+        <item>Fisika</item>
+        <item>Kimia</item>
+        <item>Matematika Umum</item>
+        <item>Matematika Dasar</item>
+        <item>Seni</item>
+        <item>Hukum</item>
+        <item>PASCASARJANA</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Mahasiswa baru</item>
+        <item>Pindahan</item>
+        <item>Mahasiswa Lama</item>
+    </string-array>
+</resources>

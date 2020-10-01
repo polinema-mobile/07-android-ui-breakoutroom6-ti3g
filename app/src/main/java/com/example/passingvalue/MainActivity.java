@@ -87,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("tanggal", date);
         intent.putExtra("gender", sex);
         intent.putExtra("jurusan", major);
+        //create object mahasiswa
+        mhs = new Mahasiswa(name,no,date,sex,major);
+        // put mahasiswa object to extra
+        intent.putExtra("MHSOBJ",mhs);
 
         mhs = new Mahasiswa(name,no,date,sex,major);
         intent.putExtra("parcellable", mhs);

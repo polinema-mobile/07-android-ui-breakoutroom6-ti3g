@@ -14,6 +14,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.passingvalue.models.Mahasiswa;
+
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     Spinner jurusan;
     Button submit;
     RadioGroup sex;
+    Mahasiswa mhs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openSecondActivity(){
-        nama = (EditText)findViewById(R.id.edtName);
+        nama = (EditText)findViewById(R.id.edtName); 
         nim = (EditText)findViewById(R.id.edtNim);
         tanggal = (EditText)findViewById(R.id.edtTanggalLahir);
         jurusan = (Spinner)findViewById(R.id.spinnerJurusan);
@@ -84,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("tanggal", date);
         intent.putExtra("gender", sex);
         intent.putExtra("jurusan", major);
+
+        mhs = new Mahasiswa(name,no,date,sex,major);
+        intent.putExtra("parcellable", mhs);
 
         startActivity(intent);
     }

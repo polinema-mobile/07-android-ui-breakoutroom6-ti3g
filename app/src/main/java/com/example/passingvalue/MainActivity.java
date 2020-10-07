@@ -1,6 +1,7 @@
 package com.example.passingvalue;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -14,6 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.passingvalue.databinding.ActivityMainBinding;
 import com.example.passingvalue.models.Mahasiswa;
 
 import java.util.Calendar;
@@ -33,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+
         tanggal = (EditText)findViewById(R.id.edtTanggalLahir);
         submit = (Button)findViewById(R.id.saveButton);
 
@@ -87,13 +91,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("tanggal", date);
         intent.putExtra("gender", sex);
         intent.putExtra("jurusan", major);
-        //create object mahasiswa
-        mhs = new Mahasiswa(name,no,date,sex,major);
-        // put mahasiswa object to extra
-        intent.putExtra("MHSOBJ",mhs);
-
-        mhs = new Mahasiswa(name,no,date,sex,major);
-        intent.putExtra("parcellable", mhs);
 
         startActivity(intent);
     }

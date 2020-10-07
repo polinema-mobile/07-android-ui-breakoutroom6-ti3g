@@ -4,8 +4,10 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Mahasiswa implements Parcelable {
-<<<<<<< HEAD
     private String nama, nim, tanggal, gender, jurusan;
+
+    public Mahasiswa() {
+    }
 
     public Mahasiswa(String nama, String nim, String tanggal, String gender, String jurusan) {
         this.nama = nama;
@@ -15,13 +17,57 @@ public class Mahasiswa implements Parcelable {
         this.jurusan = jurusan;
     }
 
-=======
-    private String name;
-    private String nim;
-    private String tanggalLahir;
-    private String jenisKelamin;
-    private String jurusan;
->>>>>>> 1eb345549fe977860c0ea985425214536c3442af
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public String getNim() {
+        return nim;
+    }
+
+    public void setNim(String nim) {
+        this.nim = nim;
+    }
+
+    public String getTanggal() {
+        return tanggal;
+    }
+
+    public void setTanggal(String tanggal) {
+        this.tanggal = tanggal;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getJurusan() {
+        return jurusan;
+    }
+
+    public void setJurusan(String jurusan) {
+        this.jurusan = jurusan;
+    }
+
+    public static final Creator<Mahasiswa> CREATOR = new Creator<Mahasiswa>() {
+        @Override
+        public Mahasiswa createFromParcel(Parcel in) {
+            return new Mahasiswa(in);
+        }
+
+        @Override
+        public Mahasiswa[] newArray(int size) {
+            return new Mahasiswa[size];
+        }
+    };
 
     @Override
     public int describeContents() {
@@ -30,7 +76,6 @@ public class Mahasiswa implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-<<<<<<< HEAD
         dest.writeString(this.nama);
         dest.writeString(this.nim);
         dest.writeString(this.tanggal);
@@ -43,43 +88,6 @@ public class Mahasiswa implements Parcelable {
         this.nim = in.readString();
         this.tanggal = in.readString();
         this.gender = in.readString();
-=======
-        dest.writeString(this.name);
-        dest.writeString(this.nim);
-        dest.writeString(this.tanggalLahir);
-        dest.writeString(this.jenisKelamin);
-        dest.writeString(this.jurusan);
     }
 
-    public Mahasiswa() {
-    }
-
-    public Mahasiswa(String name, String nim, String tanggalLahir, String jenisKelamin, String jurusan) {
-        this.name = name;
-        this.nim = nim;
-        this.tanggalLahir = tanggalLahir;
-        this.jenisKelamin = jenisKelamin;
-        this.jurusan = jurusan;
-    }
-
-    protected Mahasiswa(Parcel in) {
-        this.name = in.readString();
-        this.nim = in.readString();
-        this.tanggalLahir = in.readString();
-        this.jenisKelamin = in.readString();
->>>>>>> 1eb345549fe977860c0ea985425214536c3442af
-        this.jurusan = in.readString();
-    }
-
-    public static final Parcelable.Creator<Mahasiswa> CREATOR = new Parcelable.Creator<Mahasiswa>() {
-        @Override
-        public Mahasiswa createFromParcel(Parcel source) {
-            return new Mahasiswa(source);
-        }
-
-        @Override
-        public Mahasiswa[] newArray(int size) {
-            return new Mahasiswa[size];
-        }
-    };
 }

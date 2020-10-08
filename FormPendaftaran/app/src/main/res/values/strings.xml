@@ -33,4 +33,43 @@
         <item>Pindahan</item>
         <item>Mahasiswa Lama</item>
     </string-array>
+
+    <string-array name="agama">
+        <item>Islam</item>
+        <item>Protestan</item>
+        <item>Katolik</item>
+        <item>Budha</item>
+        <item>Hindu</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="provinsi">
+        <item>Jawa Timur</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Sumatera Barat</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Selatan</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Timur</item>
+        <item>Kalimantan Utara</item>
+        <item>Kalimantan Barat</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Timur</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi Barat</item>
+        <item>Maluku</item>
+    </string-array>
+
+    <string-array name="kota">
+        <item>Malang</item>
+        <item>Surabaya</item>
+        <item>Gresik</item>
+    </string-array>
+
+
 </resources>

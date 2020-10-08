@@ -317,7 +317,6 @@
                 android:layout_marginTop="17dp"
                 android:text="Jenis Kelamin"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="@+id/jeniskelamin"
                 app:layout_constraintEnd_toStartOf="@+id/guideline10"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -329,14 +328,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tanggallahir">
+                app:layout_constraintTop_toBottomOf="@+id/textView16">
 
                 <RadioButton
                     android:id="@+id/laki"
@@ -362,12 +361,12 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="17dp"
                 android:text="Kewarganegaraan"
-                android:textSize="24sp"
+                android:textSize="19sp"
                 app:layout_constraintBottom_toBottomOf="@+id/kewarganegaraan"
                 app:layout_constraintEnd_toStartOf="@+id/guideline10"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                app:layout_constraintTop_toBottomOf="@+id/jeniskelamin" />
 
             <EditText
                 android:id="@+id/kewarganegaraan"
